@@ -1,9 +1,23 @@
 Orders::Application.routes.draw do
   resources :items
 
+    get 'items' => 'items#index'
+    get 'items/new' => 'items#new'
+    post 'items' => 'items#create'
+
   resources :customers
 
+    get 'customers' => 'customers#index'
+    get 'customers/new' => 'customers#new'
+    post 'customers' => 'customers#create'
+
   resources :orders
+
+    get 'orders' => 'orders#index'
+    get 'orders/new' => 'orders#new'
+    post 'orders' => 'orders#create'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
